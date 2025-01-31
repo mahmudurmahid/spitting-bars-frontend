@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Raps | Spitting Bars</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg px-3">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="index.html">
+          <img
+            src="assets/images/image.png"
+            alt="Spitting Bars Logo"
+            class="img-fluid"
+            style="width: 100px; height: auto"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="community_raps.html">Community Raps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="my_raps.html">My Raps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- My Raps Section -->
+    <main class="flex-grow-1">
+      <div class="container my-5">
+        <h2 class="page-title text-center">Create Your Masterpiece</h2>
+        <p class="page-subtitle text-center">
+          Use our selection of backing tracks to inspire you
+        </p>
+
+        <!-- Track Selection with Play and Stop Audio Buttons -->
+        <div class="mb-4">
+          <label for="track-select" class="form-label">Select Track:</label>
+          <select id="track-select" class="form-select">
+            <option value="midnight-stalker">Midnight Stalker</option>
+            <option value="street-lights">Street Lights</option>
+            <option value="battle-bars">Battle Bars</option>
+          </select>
+        </div>
+
+        <!-- Audio Controls -->
+        <div class="mb-4 text-center">
+          <audio
+            id="audio-player"
+            src="assets/audio/midnight-stalker.mp3"
+            controls
+          ></audio>
+          <button id="play-audio" class="btn btn-yellow">Play Audio</button>
+          <button id="stop-audio" class="btn btn-orange">Stop Audio</button>
+        </div>
+
+        <!-- Rap Form -->
+        <form>
+          <div class="mb-3">
+            <label for="rap-title" class="form-label">Title*</label>
+            <input type="text" id="rap-title" class="form-control" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="rap-lyrics" class="form-label">Lyric*</label>
+            <textarea
+              id="rap-lyrics"
+              class="form-control"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="rap-genre" class="form-label">Genre*</label>
+            <select id="rap-genre" class="form-select" required>
+              <option value="hiphop">Hip-Hop</option>
+              <option value="trap">Trap</option>
+              <option value="boom-bap">Boom Bap</option>
+              <option value="freestyle">Freestyle</option>
+            </select>
+          </div>
+
+          <!-- Status Options -->
+          <div class="mb-3">
+            <label class="form-label">Status*</label>
+            <div class="form-check">
+              <input
+                type="radio"
+                id="personal"
+                name="status"
+                class="form-check-input"
+                checked
+              />
+              <label for="personal" class="form-check-label">Personal</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="is-protected"
+                class="form-check-input"
+              />
+              <label for="is-protected" class="form-check-label"
+                >Is Protected</label
+              >
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-yellow w-100">Save Rap</button>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 text-center">
+      <p>&copy; 2025 Spitting Bars. All rights reserved.</p>
+      <p>
+        Follow us:
+        <i class="fab fa-facebook-square ms-3"></i>
+        <i class="fab fa-twitter-square ms-3"></i>
+        <i class="fab fa-instagram-square ms-3"></i>
+        <i class="fab fa-youtube-square ms-3"></i>
+      </p>
+    </footer>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/my_raps.js"></script>
+  </body>
+</html>
